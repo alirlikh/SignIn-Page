@@ -1,15 +1,22 @@
 import axios from "axios"
+import { getToken } from "./auth"
 
-const instance = axios.create({
-  baseURL: "http://localhost:5000",
-  timeout: 5000,
+export const instance = axios.create({
+  baseURL: "http://localhost:3005/api/",
+  timeout: 50000,
   headers: {
-    Accept: "application/json"
+    Accept: "application/json",
+    "Content-Type": "application/json"
   }
 })
 
 instance.interceptors.request.use(
-  (request) => {},
+  (config) => {
+    config.headers = {
+      ...config.headers,
+      Authorization: getToken()
+    }
+  },
   (error) => {
     return Promise.reject(error)
   }
