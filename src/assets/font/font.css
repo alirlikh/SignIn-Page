@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "HindVadodara";
+  src: url("HindVadodara-Medium.eot") format("eot"),
+    url("HindVadodara-Medium.woff2") format("woff2"), url("HindVadodara-Medium.woff") format("woff"),
+    url("HindVadodara-Medium.ttf") format("truetype");
+}
