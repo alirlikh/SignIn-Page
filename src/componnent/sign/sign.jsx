@@ -9,10 +9,10 @@ function Sign() {
     <>
       <div className="wizard">
         <SignIn />
-        <SignUp />
+        {/* <SignUp />
         <button className="btn ">
           <img src={nextArrow} alt="next arrow" />
-        </button>
+        </button> */}
       </div>
     </>
   )

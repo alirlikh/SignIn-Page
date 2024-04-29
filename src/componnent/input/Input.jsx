@@ -1,13 +1,15 @@
 import React from "react"
 
-function Input(props) {
-  const { name, placeholder } = props
+function Input({ onChange, placeholder, value, name }) {
+  // const { name, placeholder, value } = props
   return (
     <input
       name={name}
       className="input"
       placeholder={placeholder}
       type={name == "password" ? "password" : "text"}
+      value={value}
+      onChange={() => onChange}
     />
   )
 }

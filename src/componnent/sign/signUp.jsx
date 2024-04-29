@@ -14,9 +14,7 @@ function SignUp(props) {
           <p>This is jwt-auth Application </p>
           <div className="lg-detail">
             Do you have an account?
-            {/* <span className=""> */}
             <button className="btn">Login</button>
-            {/* </span> */}
           </div>
           <button className="btn prev-step-btn">
             <img src={backArrow} alt="back arrow" />
@@ -27,16 +25,16 @@ function SignUp(props) {
       <div className="w-section login-field">
         <form action="" method="post">
           <label htmlFor="name">
-            <Input name="name" placeholder="Name" />
+            <input className="input" name="name" placeholder="Name" />
           </label>
           <label htmlFor="mobile">
-            <Input name="mobile" placeholder="Mobile" />
+            <input className="input" name="mobile" placeholder="Mobile" />
           </label>
           <label htmlFor="password">
-            <Input name="password" placeholder="Password" />
+            <input className="input" name="password" placeholder="Password" />
           </label>
           <label htmlFor="password">
-            <Input name="password" placeholder="Confirm Password" />
+            <input className="input" name="password" placeholder="Confirm Password" />
           </label>
         </form>
         <button className="btn signup-btn">Sign UP</button>

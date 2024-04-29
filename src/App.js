@@ -1,4 +1,5 @@
 import "./App.css"
+import "./assets/style.css"
 import { RouterProvider } from "react-router-dom"
 import router from "./routes"
 import JWTProvider from "./context/JwtContext"

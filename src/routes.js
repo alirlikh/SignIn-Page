@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom"
+import Sign from "./componnent/sign/sign"
 
 const router = createBrowserRouter([
   {
@@ -8,7 +9,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/sign",
-    element: <div>sign</div>
+    element: <Sign />
   },
   {
     path: "/logout",

@@ -92,12 +92,12 @@ input:focus {
   }
 }
 
-.wizard-item .w-section {
+/* .wizard-item .w-section {
   &:first-child {
     padding-left: calc(55% + 5em);
     background-color: red;
   }
-}
+} */
 
 .wizard-item.active {
   transform: translateX(0);
@@ -160,8 +160,9 @@ input:focus {
   background-color: #fff;
 }
 
-.login-field > .btn {
+.login-field .btn {
   background-color: #8a9ac4;
+  margin: 1rem 2rem;
 }
 
 form .input {
@@ -172,17 +173,13 @@ form {
   text-align: center;
 }
 
-.login-field .btn {
-  margin: 1rem 2rem;
-}
-
 .signup-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   background-color: rgb(142, 206, 168);
-  width: 18rem;
+  width: 20rem;
   padding: 3rem 5rem;
   height: 100%;
   border-radius: 0.5rem;
