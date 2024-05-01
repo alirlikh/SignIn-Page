@@ -131,7 +131,7 @@ input:focus {
   justify-content: center;
   align-items: flex-start;
   background-color: rgb(166, 187, 224);
-  width: 18rem;
+  width: 20rem;
   padding: 3rem 5rem;
   height: 100%;
   border-radius: 0.5rem;
@@ -179,7 +179,7 @@ form {
   justify-content: center;
   align-items: flex-start;
   background-color: rgb(142, 206, 168);
-  width: 20rem;
+  width: 18rem;
   padding: 3rem 5rem;
   height: 100%;
   border-radius: 0.5rem;

@@ -1,10 +1,11 @@
 import { getProfile } from "../services/auth.js"
 import { ACCOUNT_INITIALISE, LOGIN, LOGOUT } from "../store/action.js"
 import { tokenName } from "../services/auth.js"
+import { jwtDecode } from "jwt-decode"
 const { createContext, useReducer, useEffect } = require("react")
 
 const initiaState = {
-  isLogged: false,
+  isLoggedIn: false,
   isInitialised: false,
   user: null
 }
@@ -16,11 +17,14 @@ const verifyToken = (serviceToken) => {
   if (!serviceToken) {
     return false
   }
+
+  const decoded = jwtDecode(serviceToken)
+  return decoded.exp > Date.now() / 1000
 }
 
 const JWTProvider = ({ children }) => {
   const reducer = (state, action) => {
-    const { type } = action.type
+    const type = action.type
     switch (type) {
       case ACCOUNT_INITIALISE: {
         const { isLoggedIn, user } = action.payload

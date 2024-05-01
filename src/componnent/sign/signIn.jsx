@@ -4,7 +4,7 @@ import Input from "../input/Input"
 import loginSvg from "../ui/loginSvg.svg"
 import nextArrow from "../ui/nextArrow.svg"
 import backArrow from "../ui/backArrow.svg"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import SignUp from "./signUp"
 import { loginUser } from "../../services/user/user.api"
 import { login } from "../../services/auth"
@@ -12,6 +12,7 @@ import { login } from "../../services/auth"
 function SignIn(props) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -19,7 +20,7 @@ function SignIn(props) {
     if (profileInfo) {
       setUsername("")
       setPassword("")
-      window.location.href = "/"
+      navigate("/dashboard", { replace: true })
     } else alert("error")
   }
 
