@@ -20,7 +20,8 @@ function SignIn(props) {
     if (profileInfo) {
       setUsername("")
       setPassword("")
-      navigate("/dashboard", { replace: true })
+      // navigate("/dashboard", { replace: true })
+      window.location.href = "/dashboard"
     } else alert("error")
   }
 

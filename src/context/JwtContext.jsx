@@ -9,6 +9,39 @@ const initiaState = {
   isInitialised: false,
   user: null
 }
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACCOUNT_INITIALISE: {
+      const { isLoggedIn, user } = action.payload
+      return {
+        ...state,
+        isLoggedIn,
+        isInitialised: true,
+        user
+      }
+    }
+    case LOGIN: {
+      const { user } = action.payload
+      return {
+        ...state,
+        isLoggedIn: true,
+        user
+      }
+    }
+    case LOGOUT: {
+      return {
+        ...state,
+        isLoggedIn: false,
+        user: null
+      }
+    }
+    default: {
+      return { ...state }
+    }
+  }
+}
+
 export const JwtContext = createContext({
   ...initiaState
 })
@@ -23,39 +56,6 @@ const verifyToken = (serviceToken) => {
 }
 
 const JWTProvider = ({ children }) => {
-  const reducer = (state, action) => {
-    const type = action.type
-    switch (type) {
-      case ACCOUNT_INITIALISE: {
-        const { isLoggedIn, user } = action.payload
-        return {
-          ...state,
-          isLoggedIn,
-          isInitialised: true,
-          user
-        }
-      }
-      case LOGIN: {
-        const { user } = action.payload
-        return {
-          ...state,
-          isLoggedIn: true,
-          user
-        }
-      }
-      case LOGOUT: {
-        return {
-          ...state,
-          isLoggedIn: false,
-          user: null
-        }
-      }
-      default: {
-        return { ...state }
-      }
-    }
-  }
-
   const [state, dispatch] = useReducer(reducer, initiaState)
 
   const jwtInitialise = async () => {
@@ -103,7 +103,7 @@ const JWTProvider = ({ children }) => {
 
   useEffect(() => {
     jwtInitialise()
-  }, [])
+  }, [JwtContext])
 
   return <JwtContext.Provider value={{ ...state }}>{children}</JwtContext.Provider>
 }
