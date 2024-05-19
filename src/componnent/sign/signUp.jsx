@@ -7,7 +7,8 @@ import backArrow from "../ui/backArrow.svg"
 
 function SignUp(props) {
   return (
-    <div className="wizard-item" id="signupP">
+    <>
+      {/* <div className="wizard-item" id="signupP"> */}
       <div className="w-section">
         <div className="signup-container">
           <h2>SIGNUP PAGE</h2>
@@ -22,7 +23,7 @@ function SignUp(props) {
           </button>
         </div>
       </div>
-      <div className="w-section login-field">
+      <div className="w-section login-field" style={{ zIndex: 1 }}>
         <form action="" method="post">
           <label htmlFor="name">
             <input className="input" name="name" placeholder="Name" />
@@ -39,7 +40,8 @@ function SignUp(props) {
         </form>
         <button className="btn signup-btn">Sign UP</button>
       </div>
-    </div>
+      {/* </div> */}
+    </>
   )
 }
 
