@@ -255,3 +255,7 @@ form {
   opacity: 0.7;
   z-index: 100;
 }
+
+.error {
+  color: red;
+}
