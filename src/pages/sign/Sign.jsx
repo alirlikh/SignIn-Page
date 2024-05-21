@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import SignIn from "./signIn"
-import SignUp from "./signUp"
-import nextArrow from "../ui/nextArrow.svg"
-import backArrow from "../ui/backArrow.svg"
+import SignIn from "../../componnent/sign/signIn"
+import SignUp from "../../componnent/sign/signUp"
+import nextArrow from "../../componnent/ui/nextArrow.svg"
+import backArrow from "../../componnent/ui/backArrow.svg"
 
 function Sign() {
   const [sectionIndex, setSectionIndex] = useState(1)

@@ -1,5 +1,5 @@
 import { Route, Routes, createBrowserRouter, createRoutesFromElements } from "react-router-dom"
-import Sign from "./componnent/sign/sign"
+import Sign from "./pages/sign/Sign"
 import Dashboard from "./componnent/dashboard/Dashboard"
 import PrivateRoute from "./componnent/routes/PrivateRoute"
 import SignUp from "./componnent/sign/signUp"
