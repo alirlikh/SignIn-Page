@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# 🚀 React Authentication App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **React Authentication App**! This project is designed to demonstrate seamless user authentication in a React application with beautifully animated sign-in and sign-up forms. It incorporates modern tools like JWT for authentication, Yup for form validation, and Axios for handling API requests, all with pure CSS animations to create an engaging user experience.
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- **Fully Functional Authentication**: Users can sign up and log in using JWT authentication.
+- **Smooth Animations**: Sign-in and sign-up forms come to life with stunning CSS animations.
+- **Form Validation**: Input fields are validated using [Yup](https://github.com/jquense/yup) to ensure data integrity and security.
+- **API Requests**: Interaction with backend APIs is handled with [Axios](https://axios-http.com/), supporting both GET and POST requests.
+- **JWT Decoding**: User authentication state is managed using JWT, decoded with the help of [jwt-decode](https://www.npmjs.com/package/jwt-decode).
 
-### `yarn start`
+## 🛠 Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-### `yarn test`
+### Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository from GitHub.
+2. Navigate to the project folder.
+3. Install the required dependencies.
+4. Run the project locally.
+5. Open your browser and visit `http://localhost:3000` to see your app in action!
 
-### `yarn build`
+## 🎨 How It Works
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 1. **Sign-Up Form**  
+Users can create an account by providing their **username**, **email**, and **password**. The form input is validated using Yup, ensuring that all fields are correctly filled out.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. **Sign-In Form**  
+Once registered, users can log in using their credentials. Upon successful login, a JWT token is issued, and the user is authenticated.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 3. **JWT Authentication**  
+The JWT token is decoded using the [jwt-decode](https://www.npmjs.com/package/jwt-decode) package, allowing the app to manage and verify user sessions for secure API requests.
 
-### `yarn eject`
+### 4. **API Requests with Axios**  
+All requests to the API (sign-up, sign-in, etc.) are handled using [Axios](https://axios-http.com/), providing an easy and efficient way to send HTTP requests and receive responses.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React** – The powerful JavaScript library for building user interfaces.
+- **Axios** – Promise-based HTTP client for making API requests.
+- **JWT** – JSON Web Tokens for user authentication.
+- **Yup** – JavaScript schema validator for form input validation.
+- **CSS** – Styling and animations (pure CSS, no external libraries).
+- **React Router** – For handling navigation between pages.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📸 Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Sign In Form](public/demo/login.png)
+*Sign-In Form with smooth animations.*
 
-## Learn More
+![Sign Up Form](public/demo/signin.png)
+*Sign-Up Form with animated transitions.*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💡 How to Contribute
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributions are more than welcome! Here’s how you can help:
 
-### Code Splitting
+1. Fork the repository.
+2. Create your branch.
+3. Commit your changes.
+4. Push to your branch.
+5. Create a new pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to **star** this repository and show your support. If you have any questions or suggestions, don’t hesitate to **open an issue** or **create a pull request**. Enjoy the app!
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👨‍💻 **Happy coding!**
